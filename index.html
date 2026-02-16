@@ -1,53 +1,116 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="scroll-smooth">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page Modelo | Hugo Klhen</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serviços Profissionais em Palhoça</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-[#0f172a] text-slate-200 font-sans">
 
-    <nav class="container mx-auto px-6 py-6 flex justify-between items-center">
-        <div class="text-xl font-bold text-white">LOGO<span class="text-blue-500">AQUI</span></div>
-        <a href="#contato" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-bold transition-all">Falar com Consultor</a>
-    </nav>
+<body class="bg-gray-50 text-gray-800">
 
-    <header class="container mx-auto px-6 py-20 text-center">
-        <span class="text-blue-400 font-bold tracking-widest uppercase text-sm">Oportunidade Única</span>
-        <h1 class="text-5xl md:text-7xl font-extrabold text-white mt-4 mb-8 leading-tight">
-            Sua Frase de <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Impacto Aqui.</span>
-        </h1>
-        <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-10">
-            Explique aqui em duas linhas como o seu serviço ou produto resolve a dor do cliente de forma rápida e segura.
-        </p>
-        <div class="flex flex-col md:flex-row gap-4 justify-center">
-            <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-xl font-bold text-lg shadow-lg shadow-blue-900/40 transition-all">Quero Começar Agora</a>
-            <a href="#" class="border border-slate-700 hover:bg-slate-800 text-white px-10 py-4 rounded-xl font-bold text-lg transition-all">Saiba Mais</a>
+  <!-- HERO -->
+  <section class="bg-blue-600 text-white py-20">
+    <div class="container mx-auto px-6 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">
+        Serviço Profissional em Palhoça
+      </h1>
+      <p class="text-lg md:text-xl mb-8">
+        Atendimento rápido, preço justo e qualidade garantida.
+      </p>
+      <a href="https://wa.me/5599999999999" 
+         class="bg-white text-blue-600 font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-gray-100 transition">
+         Solicitar Orçamento
+      </a>
+    </div>
+  </section>
+
+  <!-- PROBLEMAS -->
+  <section class="py-16">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-10">Está enfrentando algum desses problemas?</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-xl shadow">
+          ❌ Atendimento demorado
         </div>
-    </header>
-
-    <section class="container mx-auto px-6 py-20 border-t border-slate-800">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div class="text-center group">
-                <div class="w-16 h-16 bg-blue-500/10 text-blue-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform"><i data-lucide="zap"></i></div>
-                <h3 class="text-xl font-bold text-white mb-2">Rápido</h3>
-                <p class="text-slate-400">Entrega acelerada para você não perder tempo.</p>
-            </div>
-            <div class="text-center group">
-                <div class="w-16 h-16 bg-green-500/10 text-green-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform"><i data-lucide="shield-check"></i></div>
-                <h3 class="text-xl font-bold text-white mb-2">Seguro</h3>
-                <p class="text-slate-400">Garantia de qualidade em cada detalhe do projeto.</p>
-            </div>
-            <div class="text-center group">
-                <div class="w-16 h-16 bg-purple-500/10 text-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform"><i data-lucide="trending-up"></i></div>
-                <h3 class="text-xl font-bold text-white mb-2">Escalável</h3>
-                <p class="text-slate-400">Feito para crescer junto com o seu faturamento.</p>
-            </div>
+        <div class="bg-white p-6 rounded-xl shadow">
+          ❌ Serviço mal feito
         </div>
-    </section>
+        <div class="bg-white p-6 rounded-xl shadow">
+          ❌ Falta de profissional confiável
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script>lucide.createIcons();</script>
+  <!-- SERVIÇOS -->
+  <section class="bg-gray-100 py-16">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-10">Como posso te ajudar</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-xl shadow">
+          <h3 class="font-semibold text-xl mb-3">Atendimento Residencial</h3>
+          <p>Serviço rápido e eficiente na sua casa.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow">
+          <h3 class="font-semibold text-xl mb-3">Manutenção e Reparos</h3>
+          <p>Resolução completa do seu problema.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow">
+          <h3 class="font-semibold text-xl mb-3">Orçamento Sem Compromisso</h3>
+          <p>Solicite uma avaliação gratuita.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFÍCIOS -->
+  <section class="py-16">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-10">Por que escolher meu serviço?</h2>
+      <div class="grid md:grid-cols-2 gap-6 text-left max-w-4xl mx-auto">
+        <p>⭐ Atendimento rápido</p>
+        <p>⭐ Profissional qualificado</p>
+        <p>⭐ Preço justo</p>
+        <p>⭐ Garantia no serviço</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section class="bg-gray-100 py-16">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-10">Clientes satisfeitos</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white p-6 rounded-xl shadow">
+          <p>"Ótimo atendimento, rápido e eficiente."</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow">
+          <p>"Serviço profissional e preço justo."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="bg-blue-600 text-white py-16 text-center">
+    <h2 class="text-3xl font-bold mb-6">Precisa de ajuda agora?</h2>
+    <a href="https://wa.me/5599999999999"
+       class="bg-white text-blue-600 font-semibold px-8 py-3 rounded-lg shadow hover:bg-gray-100 transition">
+       Falar no WhatsApp
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-800 text-white py-6 text-center">
+    <p>© 2026 Nome do Negócio - Palhoça SC</p>
+  </footer>
+
+  <!-- BOTÃO FLUTUANTE WHATSAPP -->
+  <a href="https://wa.me/5599999999999"
+     class="fixed bottom-6 right-6 bg-green-500 text-white px-5 py-3 rounded-full shadow-lg hover:bg-green-600 transition">
+     WhatsApp
+  </a>
+
 </body>
 </html>
