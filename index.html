@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hugo Klhen | Soluções Digitais</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 *{
@@ -16,49 +16,55 @@
 }
 
 body{
-  background: linear-gradient(135deg, #3A405A, #2A2F45, #3A405A);
-  background-size: 300% 300%;
-  animation: gradientMove 10s ease infinite;
+  background:#3A405A;
   color:#F8F9FF;
   overflow-x:hidden;
 }
 
-@keyframes gradientMove{
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
-}
-
-/* HERO */
+/* HERO COM IMAGEM */
 .hero{
   height:100vh;
+  background: url('https://images.unsplash.com/photo-1557804506-669a67965ba0') center/cover no-repeat;
+  position:relative;
   display:flex;
-  flex-direction:column;
   justify-content:center;
   align-items:center;
   text-align:center;
   padding:20px;
 }
 
+.hero::before{
+  content:'';
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:linear-gradient(135deg, rgba(58,64,90,0.95), rgba(20,25,40,0.85));
+  backdrop-filter: blur(4px);
+}
+
+.hero-content{
+  position:relative;
+  max-width:800px;
+  z-index:2;
+}
+
 .hero h1{
   font-size:3rem;
   font-weight:800;
-  background:linear-gradient(90deg,#00E0FF,#6C63FF);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
+  color:#00E0FF;
 }
 
 .hero p{
   margin-top:20px;
   font-size:1.2rem;
-  color:#C9D1F5;
-  max-width:600px;
+  color:#ffffff;
 }
 
 /* BOTÕES */
 .buttons{
   margin-top:40px;
   display:flex;
+  justify-content:center;
   gap:20px;
   flex-wrap:wrap;
 }
@@ -82,9 +88,9 @@ body{
 .btn-secondary{
   padding:15px 30px;
   border-radius:50px;
-  border:1px solid rgba(255,255,255,0.2);
-  backdrop-filter: blur(10px);
+  border:1px solid rgba(255,255,255,0.3);
   background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
   color:#fff;
   text-decoration:none;
   transition:0.3s;
@@ -97,11 +103,21 @@ body{
 /* SERVIÇOS */
 .services{
   padding:100px 20px;
+  max-width:1200px;
+  margin:auto;
+}
+
+.services h2{
+  text-align:center;
+  font-size:2.2rem;
+  margin-bottom:60px;
+  color:#6C63FF;
+}
+
+.grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:30px;
-  max-width:1200px;
-  margin:auto;
 }
 
 .card{
@@ -125,87 +141,103 @@ body{
 
 .card p{
   color:#C9D1F5;
-  font-size:0.95rem;
 }
 
-/* FOOTER */
-footer{
-  padding:40px;
+/* CTA FINAL */
+.cta{
+  padding:100px 20px;
   text-align:center;
-  background:rgba(0,0,0,0.3);
-  margin-top:50px;
-  font-size:0.9rem;
-  color:#C9D1F5;
 }
 
-/* WHATSAPP FLOAT */
+.cta h2{
+  font-size:2.5rem;
+  margin-bottom:30px;
+  color:#00E0FF;
+}
+
+/* WHATSAPP */
 .whatsapp{
-  position:fixed;
-  bottom:20px;
-  right:20px;
+  display:inline-block;
+  margin-top:20px;
+  padding:15px 30px;
+  border-radius:50px;
   background:#25D366;
   color:#fff;
-  width:60px;
-  height:60px;
-  border-radius:50%;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  font-size:28px;
   text-decoration:none;
+  font-weight:600;
   box-shadow:0 8px 25px rgba(37,211,102,0.4);
   transition:0.3s;
 }
 
 .whatsapp:hover{
-  transform:scale(1.1);
+  transform:scale(1.05);
 }
+
+/* RODAPÉ */
+footer{
+  padding:40px;
+  text-align:center;
+  background:rgba(0,0,0,0.3);
+  font-size:0.9rem;
+  color:#C9D1F5;
+}
+
 </style>
 </head>
 
 <body>
 
 <section class="hero">
-  <h1>Transformamos Negócios Locais em Máquinas de Vendas Digitais</h1>
-  <p>Landing Pages estratégicas, Google Local e Automações inteligentes que aumentam seu faturamento todos os meses.</p>
+  <div class="hero-content">
+    <h1>Soluções Digitais para Negócios Locais</h1>
+    <p>Landing pages estratégicas, Google Local e automações inteligentes para transformar visitantes em clientes.</p>
 
-  <div class="buttons">
-    <a href="#contato" class="btn-primary">Solicitar Orçamento Gratuito</a>
-    <a href="#servicos" class="btn-secondary">Conhecer Serviços</a>
+    <div class="buttons">
+      <a href="#contato" class="btn-primary">Solicitar Orçamento Gratuito</a>
+      <a href="#servicos" class="btn-secondary">Conhecer Serviços</a>
+    </div>
   </div>
 </section>
 
 <section class="services" id="servicos">
+  <h2>Soluções Estratégicas</h2>
 
-  <div class="card">
-    <h3>Landing Pages de Alta Conversão</h3>
-    <p>Páginas estratégicas focadas em transformar visitantes em clientes reais.</p>
+  <div class="grid">
+
+    <div class="card">
+      <h3>Landing Pages de Alta Conversão</h3>
+      <p>Páginas estratégicas focadas em transformar visitantes em clientes reais.</p>
+    </div>
+
+    <div class="card">
+      <h3>Google Local</h3>
+      <p>Domine as buscas da sua região e apareça no topo do Google Maps.</p>
+    </div>
+
+    <div class="card">
+      <h3>Automações Inteligentes</h3>
+      <p>Sistemas que economizam tempo e permitem escalar seu negócio.</p>
+    </div>
+
+    <div class="card">
+      <h3>Velocidade, Performance e Suporte</h3>
+      <p>Sites rápidos, seguros e suporte disponível.</p>
+    </div>
+
   </div>
+</section>
 
-  <div class="card">
-    <h3>Google Local</h3>
-    <p>Domine as buscas da sua região e apareça no topo do Google Maps.</p>
-  </div>
-
-  <div class="card">
-    <h3>Automações Inteligentes</h3>
-    <p>Sistemas que economizam tempo e permitem escalar seu negócio.</p>
-  </div>
-
-  <div class="card">
-    <h3>Velocidade e Performance</h3>
-    <p>Sites rápidos, seguros e preparados para SEO.</p>
-  </div>
-
+<section class="cta">
+  <h2>Pronto para aumentar seu faturamento?</h2>
+  <a href="https://wa.me/55SEUNUMEROAQUI" class="whatsapp" target="_blank">
+    Falar no WhatsApp
+  </a>
 </section>
 
 <footer>
-  <strong>Hugo Klhen Soluções Digitais</strong><br>
-  CNPJ: 00.000.000/0001-00<br>
-  © 2026 Todos os direitos reservados
+  <strong>Hugo Klhen - Soluções Digitais</strong><br>
+  Todos os direitos reservados
 </footer>
-
-<a href="https://wa.me/55SEUNUMEROAQUI" class="whatsapp" target="_blank">📱</a>
 
 </body>
 </html>
