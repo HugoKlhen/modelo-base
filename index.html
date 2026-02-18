@@ -3,30 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hugo Klhen | Soluções Digitais</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<title>Soluções Digitais</title>
 
 <style>
+
+/* RESET */
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:'Inter', sans-serif;
-  scroll-behavior:smooth;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 body{
-  background:#3A405A;
-  color:#F8F9FF;
+  background:#0f172a;
+  color:#fff;
   overflow-x:hidden;
 }
 
 /* HERO */
+
 .hero{
   height:100vh;
-  background:url('background-empresarial.png') center/cover no-repeat fixed;
-  position:relative;
+  background: linear-gradient(135deg,#0f172a,#1e293b);
   display:flex;
   justify-content:center;
   align-items:center;
@@ -34,90 +33,51 @@ body{
   padding:20px;
 }
 
-.hero::before{
-  content:'';
-  position:absolute;
-  width:100%;
-  height:100%;
-  background:linear-gradient(135deg, rgba(58,64,90,0.9), rgba(20,25,40,0.85));
-  z-index:1;
-}
-
-#particles{
-  position:absolute;
-  width:100%;
-  height:100%;
-  z-index:2;
-}
-
 .hero-content{
-  position:relative;
   max-width:800px;
-  z-index:3;
+  animation: fadeHero 1.5s ease forwards;
 }
 
 .hero h1{
-  font-size:3rem;
-  font-weight:800;
-  background:linear-gradient(90deg,#00E0FF,#6C63FF,#00E0FF);
-  background-size:200% auto;
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  animation:shine 5s linear infinite;
-}
-
-@keyframes shine{
-  to{ background-position:200% center; }
+  font-size:48px;
+  margin-bottom:20px;
 }
 
 .hero p{
-  margin-top:20px;
-  font-size:1.2rem;
-  color:#ffffff;
+  font-size:20px;
+  color:#cbd5e1;
 }
 
-/* BOTÕES */
-.buttons{
-  margin-top:40px;
-  display:flex;
-  justify-content:center;
-  gap:20px;
-  flex-wrap:wrap;
+/* HERO ENTRADA */
+@keyframes fadeHero{
+  from{
+    opacity:0;
+    transform:translateY(40px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
 }
 
-.btn-primary, .btn-secondary{
-  padding:15px 30px;
-  border-radius:50px;
-  text-decoration:none;
-  font-weight:600;
-  transition:0.3s;
+/* SERVICES */
+
+.services{
+  padding:100px 20px;
+  text-align:center;
 }
 
-.btn-primary{
-  background:linear-gradient(90deg,#00E0FF,#6C63FF);
-  color:#fff;
-  box-shadow:0 10px 30px rgba(0,224,255,0.3);
+.services h2{
+  font-size:36px;
+  margin-bottom:20px;
 }
 
-.btn-primary:hover{
-  transform:translateY(-4px);
-}
+/* REVEAL APPLE STYLE */
 
-.btn-secondary{
-  border:1px solid rgba(255,255,255,0.3);
-  background: rgba(255,255,255,0.05);
-  color:#fff;
-}
-
-.btn-secondary:hover{
-  background: rgba(255,255,255,0.15);
-}
-
-/* SECTIONS REVEAL */
 .reveal{
   opacity:0;
-  transform:translateY(60px);
-  transition:all 1s cubic-bezier(0.16,1,0.3,1);
+  transform:translateY(80px);
+  transition: all 1.2s cubic-bezier(0.16,1,0.3,1);
 }
 
 .reveal.active{
@@ -125,222 +85,128 @@ body{
   transform:translateY(0);
 }
 
-/* SERVIÇOS */
-.services{
-  padding:120px 20px;
-  max-width:1200px;
-  margin:auto;
-  text-align:center;
-}
+/* CARDS EXEMPLO */
 
-.services h2{
-  font-size:2.2rem;
-  margin-bottom:20px;
-  color:#6C63FF;
-}
-
-.subtitle{
-  margin-bottom:60px;
-  font-size:1.2rem;
-  color:#C9D1F5;
-}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+.cards{
+  margin-top:60px;
+  display:flex;
   gap:30px;
+  justify-content:center;
+  flex-wrap:wrap;
 }
 
 .card{
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(15px);
-  border-radius:20px;
+  background:rgba(255,255,255,0.05);
   padding:30px;
-  border:1px solid rgba(255,255,255,0.1);
+  width:280px;
+  border-radius:20px;
+  backdrop-filter:blur(10px);
   transition:0.4s;
 }
 
 .card:hover{
   transform:translateY(-10px);
+  background:rgba(255,255,255,0.08);
 }
 
-.card h3{
-  margin-bottom:15px;
-  color:#00E0FF;
+/* FOOTER PREMIUM */
+
+.premium-footer{
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  padding:60px 20px;
+  text-align:center;
+  position:relative;
 }
 
-.card p{
-  color:#C9D1F5;
+.footer-content{
+  max-width:800px;
+  margin:auto;
+  opacity:0;
+  transform: translateY(60px);
+  transition: all 1.2s cubic-bezier(0.16,1,0.3,1);
 }
 
-/* MODELOS */
-.models{
-  margin-top:100px;
+.premium-footer.active .footer-content{
+  opacity:1;
+  transform: translateY(0);
 }
 
-.models h3{
-  font-size:1.8rem;
+.premium-footer h3{
+  font-size:22px;
   margin-bottom:10px;
-  color:#00E0FF;
 }
 
-.models p{
-  margin-bottom:40px;
-  color:#C9D1F5;
+.premium-footer span{
+  font-size:14px;
+  color:#94a3b8;
 }
 
-.model-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:30px;
-}
-
-.model-box{
-  height:200px;
-  border-radius:20px;
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(15px);
-  border:1px solid rgba(255,255,255,0.1);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  transition:0.3s;
-  cursor:pointer;
-}
-
-.model-box:hover{
-  transform:scale(1.05);
-  box-shadow:0 20px 40px rgba(0,0,0,0.4);
-}
-
-/* CTA */
-.cta{
-  padding:120px 20px;
-  text-align:center;
-}
-
-.cta h2{
-  font-size:2.5rem;
-  margin-bottom:30px;
-  color:#00E0FF;
-}
-
-.whatsapp{
-  display:inline-block;
-  padding:15px 30px;
-  border-radius:50px;
-  background:#25D366;
-  color:#fff;
-  text-decoration:none;
-  font-weight:600;
-}
-
-/* FOOTER */
-footer{
-  padding:40px;
-  text-align:center;
-  background:rgba(0,0,0,0.3);
-  font-size:0.9rem;
-  color:#C9D1F5;
-}
 </style>
 </head>
 
 <body>
 
+<!-- HERO -->
 <section class="hero">
-<canvas id="particles"></canvas>
-<div class="hero-content reveal">
-<h1>Transformando Ideias em Soluções Digitais</h1>
-<p>Landing pages estratégicas, Google Local e automações inteligentes para transformar visitantes em clientes.</p>
-
-<div class="buttons">
-<a href="#" class="btn-primary">Solicitar Orçamento Gratuito</a>
-<a href="#servicos" class="btn-secondary">Conhecer Serviços</a>
-</div>
-</div>
+  <div class="hero-content">
+    <h1>Transformando Ideias em Soluções Digitais</h1>
+    <p>Soluções estratégicas para impulsionar negócios locais</p>
+  </div>
 </section>
 
+<!-- SERVICES -->
 <section class="services reveal" id="servicos">
-<h2>Soluções Estratégicas</h2>
+  <h2>Soluções Estratégicas</h2>
 
-<div class="grid">
-<div class="card"><h3>Landing Pages de Alta Conversão</h3><p>Páginas estratégicas focadas em transformar visitantes em clientes reais.</p></div>
-<div class="card"><h3>Google Local</h3><p>Domine as buscas da sua região e apareça no topo do Google Maps.</p></div>
-<div class="card"><h3>Automações Inteligentes</h3><p>Sistemas que economizam tempo e permitem escalar seu negócio.</p></div>
-<div class="card"><h3>Velocidade, Performance e Suporte</h3><p>Sites rápidos, seguros e suporte disponível.</p></div>
-</div>
+  <div class="cards">
+    <div class="card reveal">
+      <h3>Landing Pages</h3>
+      <p>Páginas modernas com foco em conversão.</p>
+    </div>
 
-<div class="models reveal">
-<h3>Modelos em Destaque</h3>
-<p>Clique nos modelos abaixo para ver uma demonstração ao vivo</p>
-
-<div class="model-grid">
-<div class="model-box">Modelo 01</div>
-<div class="model-box">Modelo 02</div>
-</div>
-</div>
+    <div class="card reveal">
+      <h3>Automação</h3>
+      <p>Processos digitais inteligentes para seu negócio.</p>
+    </div>
+  </div>
 </section>
 
-<section class="cta reveal">
-<h2>Pronto para aumentar seu faturamento?</h2>
-<a href="https://wa.me/55SEUNUMEROAQUI" class="whatsapp" target="_blank">Falar no WhatsApp</a>
-</section>
-
-<footer>
-Soluções Digitais para Negócios Locais<br>
-© Todos os direitos reservados
+<!-- FOOTER -->
+<footer class="premium-footer">
+  <div class="footer-content">
+    <h3>Soluções Digitais para Negócios Locais</h3>
+    <span>© 2026 Todos os direitos reservados</span>
+  </div>
 </footer>
 
 <script>
-/* REVEAL SCROLL ESTILO APPLE */
-const reveals = document.querySelectorAll(".reveal");
+
+/* SCROLL PREMIUM ANIMATION */
 
 function revealOnScroll(){
+  const reveals = document.querySelectorAll(".reveal");
+
   reveals.forEach(el=>{
     const windowHeight = window.innerHeight;
     const elementTop = el.getBoundingClientRect().top;
-    if(elementTop < windowHeight - 100){
+    const revealPoint = 120;
+
+    if(elementTop < windowHeight - revealPoint){
       el.classList.add("active");
     }
   });
+
+  const footer = document.querySelector(".premium-footer");
+  const footerTop = footer.getBoundingClientRect().top;
+
+  if(footerTop < window.innerHeight - 100){
+    footer.classList.add("active");
+  }
 }
 
 window.addEventListener("scroll", revealOnScroll);
-revealOnScroll();
+window.addEventListener("load", revealOnScroll);
 
-/* PARTICLES */
-const canvas = document.getElementById("particles");
-const ctx = canvas.getContext("2d");
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-let particlesArray=[];
-class Particle{
-constructor(){
-this.x=Math.random()*canvas.width;
-this.y=Math.random()*canvas.height;
-this.size=Math.random()*2;
-this.speedY=Math.random()*0.5+0.2;
-}
-update(){
-this.y+=this.speedY;
-if(this.y>canvas.height){this.y=0;}
-}
-draw(){
-ctx.fillStyle="rgba(255,255,255,0.4)";
-ctx.beginPath();
-ctx.arc(this.x,this.y,this.size,0,Math.PI*2);
-ctx.fill();
-}
-}
-function init(){for(let i=0;i<80;i++){particlesArray.push(new Particle());}}
-function animate(){
-ctx.clearRect(0,0,canvas.width,canvas.height);
-particlesArray.forEach(p=>{p.update();p.draw();});
-requestAnimationFrame(animate);
-}
-init();
-animate();
 </script>
 
 </body>
